@@ -46,7 +46,7 @@ io.on('connection', (socket) => {
 });
 
 // Use PORT from environment for deployment
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4567;
 server.listen(PORT, () => {
     console.log(`✅ Server is running at http://localhost:${PORT}`);
 });

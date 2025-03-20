@@ -4,7 +4,7 @@
   "main": "dist/server.ts",
   "scripts": {
     "build": "tsc",
-    "start": "node dist/server.js",
+    "start": "node src/server.ts",
     "dev": "nodemon src/server.ts",
     "vercel-build": "echo hello"
   },
