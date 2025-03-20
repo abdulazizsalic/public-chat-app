@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "dist/server.ts",
   "scripts": {
-    "build": "npx tsc",
+    "build": "npx --no-install tsc",
     "start": "node dist/server.js",
     "dev": "nodemon server.ts"
   },
