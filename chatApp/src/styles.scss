@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+.custom-snackbar {
+    background-color: 	#1e1e1e;
+    color: #F1F0E9;
+}
+
+// @media only screen and (max-width: 600px) {
+//     .custom-snackbar {
+//         margin-inline: 100px !important;
+//         margin-right: 100px !important;
+//         width: 100%;
+//     }
+//   }

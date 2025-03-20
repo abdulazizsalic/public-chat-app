@@ -1,0 +1,13 @@
+<div class="flex flex-col justify-center">
+    <ol class="mt-10 self-center">
+        <li>
+          <mat-form-field>
+            <mat-label>What's your name?</mat-label>
+            <input matInput [(ngModel)]="name"/>
+          </mat-form-field>
+        </li>
+        <li class="flex justify-center">
+          <button class="bg-[#E4EFE7] hover:bg-[#99BC85] text-lg px-2 cursor-pointer" (click)="addName()">Enter</button>
+        </li>
+      </ol>   
+</div>

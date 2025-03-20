@@ -1,0 +1,12 @@
+<div class="container flex flex-col body h-full absolute border-b-1">
+    <div class="inbox p-4 h-[90%]">
+        <div *ngFor="let message of messages">
+            <label *ngIf="message.user !== user" class="text-xs text-gray-500">{{ message.user }}({{message.id}})</label><br>
+            <span [ngClass]="message.user === user ? 'bg-blue-50 text-blue-700 ring-blue-700/10 float-right' : 'bg-green-50 text-green-700 ring-green-600/20'" class="inline-flex items-center rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset">{{ message.message }}</span>
+            <br>
+        </div>
+    </div>
+    <div>
+        <app-input-message></app-input-message>
+    </div>
+</div>

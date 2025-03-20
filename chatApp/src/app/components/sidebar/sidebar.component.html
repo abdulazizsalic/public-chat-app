@@ -1,0 +1,10 @@
+<div class="sidebar flex flex-col h-full bg-[#41644A] absolute p-4">
+    <div class="side-header text-lg font-medium ml-2 mb-2">
+        <span>Users</span>
+    </div>
+    <div class="side-content ml-4">
+        <ul>
+            <li *ngFor="let user of onlineUsers">*{{ user }}</li>
+        </ul>
+    </div>
+</div>
