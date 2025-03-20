@@ -6,7 +6,7 @@ import { io } from 'socket.io-client';
   providedIn: 'root'
 })
 export class ChatService {
-  socket = io('http://localhost:10000');
+  socket = io('https://public-chat-app-server.onrender.com/');
   user = new BehaviorSubject<string>('');
   users = new BehaviorSubject<any[]>([]);
   socketId: string | undefined = '';
