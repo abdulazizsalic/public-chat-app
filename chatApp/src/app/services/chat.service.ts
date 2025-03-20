@@ -6,7 +6,7 @@ import { io } from 'socket.io-client';
   providedIn: 'root'
 })
 export class ChatService {
-  socket = io('http://localhost:3000');
+  socket = io('http://localhost:10000');
   user = new BehaviorSubject<string>('');
   users = new BehaviorSubject<any[]>([]);
   socketId: string | undefined = '';
