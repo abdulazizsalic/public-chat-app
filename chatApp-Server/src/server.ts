@@ -10,7 +10,7 @@ const app = express();
 const server = createServer(app); // Create an HTTP server
 const io = new Server(server, {
     cors: {
-        origin: "http://localhost:4200"
+        origin: "https://public-chat-app-client-s13v.onrender.com"
     }
 });
 
