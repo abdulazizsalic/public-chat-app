@@ -1,15 +1,23 @@
-import { Server } from 'socket.io';
+import { Server } from "socket.io";
+import { createServer } from "http";
+import express from "express";
 
 const messages:any = [];
 const users:any = [];
 let onlineUsers = new Set();
 
-const io = new Server(3000, {
+const app = express();
+const server = createServer(app); // Create an HTTP server
+const io = new Server(server, {
     cors: {
-        origin: 'http://localhost:4200'
+        origin: "http://localhost:4200"
     }
 });
-//
+
+app.get("/", (req, res) => {
+    res.send("<h1>Socket.io Server is Running!</h1>");
+});
+
 io.on('connection', (socket) => {
     onlineUsers.add(socket.id);
     io.emit("onlineUsers", [...onlineUsers]);
@@ -35,4 +43,10 @@ io.on('connection', (socket) => {
         // Notify all clients about the updated list
         io.emit("onlineUsers", [...onlineUsers]);
       });
+});
+
+// Use PORT from environment for deployment
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => {
+    console.log(`✅ Server is running at http://localhost:${PORT}`);
 });

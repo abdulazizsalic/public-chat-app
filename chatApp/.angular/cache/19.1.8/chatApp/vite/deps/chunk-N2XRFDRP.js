@@ -4,7 +4,7 @@ import {
   _bindEventWithOptions,
   coerceElement,
   coerceNumberProperty
-} from "./chunk-UKA572S4.js";
+} from "./chunk-BMWZEM2J.js";
 import {
   DOCUMENT
 } from "./chunk-KRYUZX4E.js";
@@ -502,4 +502,4 @@ export {
   CdkTextareaAutosize,
   TextFieldModule
 };
-//# sourceMappingURL=chunk-NODRESZ5.js.map
+//# sourceMappingURL=chunk-N2XRFDRP.js.map
